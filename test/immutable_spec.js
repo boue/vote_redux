@@ -1,4 +1,5 @@
 import {expect} from 'chai';
+import {List, Map} from 'immutable';
 
 describe('immutability', () => {
 
@@ -28,7 +29,7 @@ describe('immutability', () => {
       let state = List.of('Trainspotting', '28 Days Later');
       let nextState = addMovie(state, 'Sunshine');
 
-      expect(nextStatee).to.equal(List.of(
+      expect(nextState).to.equal(List.of(
         'Trainspotting',
         '28 Days Later',
         'Sunshine'
