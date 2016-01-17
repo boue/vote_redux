@@ -8,12 +8,18 @@ export function setEntries(state, entries){
 export function next(state){
   //.get Returns the value associated with the provided key
   const entries = state.get('entries').concat(getWinners(state.get('vote')));
+  if (entries.size === 1) {
+    return state.remove('vote')
+                .remove('entries')
+                .set('winnder', entries.first());
+  } else {
   return state.merge({
-    //takes first two
-    vote: Map({pair: entries.take(2)}),
-    //returns entries but by skipping first two
-    entries: entries.skip(2)
-  });
+      //takes first two
+      vote: Map({pair: entries.take(2)}),
+      //returns entries but by skipping first two
+      entries: entries.skip(2)
+    });
+  }
 }
 
 export function vote(state, entry){
