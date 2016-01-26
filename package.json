@@ -1,14 +1,25 @@
 {
+<<<<<<< HEAD
   "name": "voting-client",
+=======
+  "name": "voting-server",
+>>>>>>> 3fcd5ef6f85880b0a38e3a2910ab07264f800c92
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
     "test": "echo \"Error: no test specified\" && exit 1"
+=======
+    "start": "babel-node index.js",
+    "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive",
+    "test:watch": "npm run test -- --watch"
+>>>>>>> 3fcd5ef6f85880b0a38e3a2910ab07264f800c92
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+<<<<<<< HEAD
   "babel": {
     "presets": [
       "es2015",
@@ -25,5 +36,24 @@
     "mocha": "^2.3.4",
     "webpack": ">=1.0.0 <3",
     "webpack-dev-server": "^1.14.1"
+=======
+  "devDependencies": {
+    "babel-cli": "^6.4.0",
+    "babel-core": "^6.4.0",
+    "babel-preset-es2015": "^6.3.13",
+    "chai": "^3.4.1",
+    "chai-immutable": "^1.5.3",
+    "mocha": "^2.3.4"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "dependencies": {
+    "immutable": "^3.7.6",
+    "redux": "^3.0.5",
+    "socket.io": "^1.4.4"
+>>>>>>> 3fcd5ef6f85880b0a38e3a2910ab07264f800c92
   }
 }
